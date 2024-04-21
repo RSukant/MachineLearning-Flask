@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Results</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Additional Custom Styles -->
+    <style>
+        /* Additional Custom Styles */
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+        }
+
+        .container {
+            max-width: 600px; /* Limiting container width for better readability */
+        }
+
+        .theme-btn {
+            border-radius: 25px; /* Rounded shape */
+        }
+
+        .correlation-image {
+            max-width: 100%; /* Make sure the image doesn't exceed its container width */
+            border: 1px solid #ddd; /* Add a subtle border */
+            border-radius: 5px; /* Add rounded corners */
+            margin-top: 20px; /* Add some space between the text and the image */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Training Results</h1>
+        <p class="text-center">Accuracy: {{ accuracy }}</p>
+        <img class="correlation-image mx-auto d-block" src="data:image/png;base64,{{ correlation_visualization }}" alt="Correlation Heatmap">
+        <p class="text-center">Correlation Heatmap</p>
+        <div class="text-center mt-4">
+            <a href="/predict" class="btn btn-primary theme-btn">Predict</a>
+        </div>
+    </div>
+</body>
+</html>
